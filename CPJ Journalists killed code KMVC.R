@@ -33,14 +33,6 @@ ggplot(CPJ, aes(x = year)) +
   geom_text(aes(label=..count..), stat="count", position=position_stack(0.7)) +
   ggtitle("All deaths, 1992-2018, by year")
 
-
-#all deaths, by country, since 1992
-ggplot(CPJ, aes(x = country)) + 
-  geom_histogram(stat = "count", position = "dodge", fill = "white") + 
-  theme(axis.text.x = element_text(angle = 90, hjust=0)) + 
-  geom_text(aes(label=..count..),stat="count",position=position_stack()) + 
-  ggtitle("All deaths, 1992-2018, by country")
-
 #sources of fire
 ggplot(CPJ, aes(x = sourcesOfFire)) + 
   geom_bar(fill = "pink") + 
